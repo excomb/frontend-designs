@@ -1,0 +1,296 @@
+
+article,
+/*a self-contained, independent piece of content that can be syndicated independently from the rest of the page.
+It is used to mark up content such as blog posts, articles, forums, 
+and similar types of content that could be syndicated or reused.
+*/
+aside, 
+/*
+aside is used to mark up content that is tangentially related to the main content of the page.
+This content could be a sidebar,
+pull quote, or any other type of content that is separate from the main content, but still related to it.
+
+<aside><h1>Related news..</h1></aside>
+*/
+details,
+/*
+is used to create an interactive widget that the user can open and close to view or hide additional content.
+It is often used to create things like accordions, FAQs, or content that can be expanded and contracted.
+<details>
+<summary>The function does xyz</summary>
+<p>How to use it...<p>
+</details>
+*/
+figcaption,
+/*
+ used to provide a caption or description for a <figure> element.
+ The <figure> element is used to mark up content, such as images, diagrams, code snippets,
+ <figure>
+  <img src="..." >
+  <figcaption>Figure1: ...</figcaption>
+ </figure>
+*/
+figure,
+/* tag in HTML represents self-contained content, such as illustrations, diagrams, photos, code snippets, etc.
+, that is referenced within the main content of an HTML document. 
+*/
+footer,
+/* is usually placed at the bottom of a web page or section of a web page and contains content that is less important than the main content.
+The footer content can contain text, images, links, lists, and other HTML elements.
+*/
+
+header, 
+/*
+represents the introductory content or a group of navigational links for a web page or a section of a web page.
+ It typically contains a logo, a title, and one or more navigation menus.
+*/
+
+/*
+hgroup,
+removed from html5 spec
+*/
+
+nav,
+/*
+ it provides a semantic meaning to the navigation links on a web page,
+  which makes the page more accessible and easier to understand for both users and search engines.
+*/
+
+section
+/*
+semantics, better then div, but try to use main, footer etc
+
+https://www.w3.org/TR/2011/WD-html5-20110525/sections.html#headings-and-sections
+
+Original w3 doc
+a standalone section of a web page that contains a distinct piece of content,
+ such as a header (here h1-h6) is meant, a footer, a main content area, or a sidebar.
+*/
+
+{ display: block; }
+
+audio,
+/*
+<figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio
+        controls
+        src="/media/cc0-audio/t-rex-roar.mp3">
+            <a href="/media/cc0-audio/t-rex-roar.mp3">
+                Download audio
+            </a>
+    </audio>
+</figure>
+*/
+canvas,
+
+video 
+
+{ 
+    display: inline-block; 
+}
+
+audio:not([controls]) { /* do i want this? */
+     display: none
+}
+
+[hidden] { display: none; }  /*not really needed, tag + hidden attribute removed from flow*/
+
+html { 
+    font-size: 100%; 
+    text-size-adjust: 100%; /* do not inflate */
+    -ms-text-size-adjust: 100%;
+}
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+
+body { 
+    margin: 0;
+    /* https://www.w3.org/TR/css-values-3/#font-relative-lengths */
+    font-size: 1em; /* this is 1x the font-size of the body element */
+
+    line-height: 1.4; /* without dimension it is multiplied by font-size,
+    https://www.w3.org/TR/css-inline-3/#line-height-property
+*/
+}
+
+a { color: #00e; }
+/* visited, hover, focus, hover, are https://www.w3.org/TR/2018/REC-selectors-3-20181106/#dynamic-pseudos*/
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+/* its like <a> but gives a tooltip if you hover over it with the mouse <abbr title="World Health Organization">WHO</abbr> */
+abbr[title] { border-bottom: 1px dotted; }
+/* b and strong are kindof the same */
+b, strong { font-weight: bold; }
+
+
+/* User agent stylesheet from Chrome
+
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+*/
+blockquote { margin: 1em 40px; }
+
+/*
+
+Definition, its like `` in markdown
+
+ User agent stylesheet from Chrome
+ dfn {
+    font-style: italic;
+}
+*/
+
+dfn { font-style: italic; }
+
+/* horizontal separation line, old style? 
+
+User agent CSS (Chrome)
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+*/
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+/*
+The <ins> tag defines a text that has been inserted into a document. Browsers will usually underline inserted text.
+
+User agent style
+ins {
+    text-decoration: underline;
+}
+
+*/
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+@media only screen and (min-width: 35em) {
+    .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+    .ir br { display: none; }
+    .hidden { display: none !important; visibility: hidden; }
+    .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+    .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+    .invisible { visibility: hidden; }
+    .clearfix:before, .clearfix:after { content: ""; display: table; }
+    .clearfix:after { clear: both; }
+    .clearfix { *zoom: 1; }
+}
+@media print {
+    * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; } /* h5bp.com/t */
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,img {
+    border:0;
+    margin:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var { }
+ol,ul {
+    list-style:none;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border:0;
+}
+li{padding:0;}
+.clearfix:after {content: "."; display: block; clear: both;visibility: hidden; line-height: 0; height: 0}
+.clearfix {display: inline-block}
+html[xmlns] .clearfix {display: block}
+* html .clearfix {height: 1%}
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+a{text-decoration:none; color:#000;}
+head {display:block;}
+a{outline:0;}
+body {
+    font-family: 'myFontRegular', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background: #15151c;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+*, input, select{box-sizing: border-box;}
+/* Reset Tools */
