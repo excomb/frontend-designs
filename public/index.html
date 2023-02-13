@@ -1,9 +1,86 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="reset.css">
-    </head>
-    <body>
-        <h1>hello world</h1>
-    </body>
+
+<head>
+    <!--link rel="stylesheet" href="reset.css"-->
+</head>
+
+<body>
+    <samp>Hello, World!</samp>
+    <h1>hello world</h1>
+    <pre>Something     with a lot of preserved    whitespace?</pre>
+    <q>This is a quote</q>
+    <small>This is small text</small>
+    <span>This is a formula A<sup>2</sup> A<sub>2</sub> </span>
+    <form action="/submit-form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="user_email">
+
+        <input type="submit" value="Submit">
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+        <button>Press me!</button>
+        <textarea rows="4" cols="50">
+            This is some default text in the textarea.
+    </textarea>
+    </form>
+    <div>
+        <img src="https://tinyurl.com/5xhyfraz" alt="A description of the image">
+    </div>
+    <div>
+        <svg height="210" width="500">
+            <polygon points="100,10 40,198 190,78 10,78 160,198"
+                style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+            Sorry, your browser does not support inline SVG.
+        </svg>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <ul>
+        <li>hello</li>
+        <li>world</li>
+    </ul>
+    <ol>
+        <li>howdy</li>
+        <li>cowboy</li>
+    </ol>
+    <blockquote>
+        It is a period of civil war. Rebel spaceships, striking from a hidden base,
+        have won their first victory against the evil Galactic Empire. During the
+        battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire's
+        ultimate weapon, the DEATH STAR, an armored space station with enough power to
+        destroy an entire planet.<code>selectAll()</code>
+    </blockquote>
+    <p>
+        You can also create a new document using the keyboard shortcut
+        <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+    </p>
+    <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+            <a href="/media/cc0-audio/t-rex-roar.mp3">
+                Download audio
+            </a>
+        </audio>
+        <canvas id="some-canvas"></canvas>
+    </figure>
+    <!--video controls>
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video-->
+</body>
+
 </html>
