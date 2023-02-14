@@ -1,10 +1,9 @@
-
 article,
 /*a self-contained, independent piece of content that can be syndicated independently from the rest of the page.
 It is used to mark up content such as blog posts, articles, forums, 
 and similar types of content that could be syndicated or reused.
 */
-aside, 
+aside,
 /*
 aside is used to mark up content that is tangentially related to the main content of the page.
 This content could be a sidebar,
@@ -39,7 +38,7 @@ footer,
 The footer content can contain text, images, links, lists, and other HTML elements.
 */
 
-header, 
+header,
 /*
 represents the introductory content or a group of navigational links for a web page or a section of a web page.
  It typically contains a logo, a title, and one or more navigation menus.
@@ -74,7 +73,10 @@ a standalone section of a web page that contains a distinct piece of content,
  such as a header (here h1-h6) is meant, a footer, a main content area, or a sidebar.
 */
 
-{ display: block; }
+    {
+    display: block;
+}
+
 /*
 USER AGENT CHROME STYLE
 
@@ -125,17 +127,21 @@ video {
     overflow: clip;
 }
 */
-video 
-{ 
-    display: inline-block;  /* normally this is just "display: inline" 
+video {
+    display: inline-block;
+    /* normally this is just "display: inline" 
 }
 
 audio:not([controls]) { /* do i want this? */
-     display: none
+    display: none
 }
 
 /* anything that is hidden should not be displayed*/
-[hidden] { display: none; }  /*not really needed, tag + hidden attribute removed from flow*/
+[hidden] {
+    display: none;
+}
+
+/*not really needed, tag + hidden attribute removed from flow*/
 
 /* 
 USER AGENT CHROME 
@@ -144,13 +150,14 @@ html {
     display: block;
 }
 */
-html { 
-    font-size: 100%; 
-    text-size-adjust: 100%; /* do not inflate */
+html {
+    font-size: 100%;
+    text-size-adjust: 100%;
+    /* do not inflate */
     -ms-text-size-adjust: 100%;
 }
 
-html, 
+html,
 
 /* CHROME USER AGENT
 button {
@@ -178,7 +185,7 @@ button {
     border-image: initial;   // this means default 
 }
 */
-button, 
+button,
 
 /*
 BOTH ARE CHROME USER AGENT CSS, one for general INPUT, other for INPUT specific TEXT
@@ -221,7 +228,7 @@ input {
     border-image: initial;
 }
 */
-input, 
+input,
 /*
 CHROME USER AGENT
 
@@ -268,7 +275,7 @@ select {
 }
 */
 
-select, 
+select,
 
 /*
 Use vertical-align: bottom; or vertical-align: top
@@ -321,7 +328,10 @@ textarea {
     padding: 2px;
 }
 */
-textarea { font-family: sans-serif; color: #222; }
+textarea {
+    font-family: sans-serif;
+    color: #222;
+}
 
 /*
 CHROME USER AGENT
@@ -330,27 +340,50 @@ body {
     margin: 8px;
 }
 */
-body { 
+body {
     margin: 0;
     /* https://www.w3.org/TR/css-values-3/#font-relative-lengths */
-    font-size: 1em; /* this is 1x the font-size of the body element */
+    font-size: 1em;
+    /* this is 1x the font-size of the body element */
 
-    line-height: 1.4; /* without dimension it is multiplied by font-size,
+    line-height: 1.4;
+    /* without dimension it is multiplied by font-size,
     https://www.w3.org/TR/css-inline-3/#line-height-property
 */
 }
 
-a { color: #00e; }
+a {
+    color: #00e;
+}
+
 /* visited, hover, focus, hover, are https://www.w3.org/TR/2018/REC-selectors-3-20181106/#dynamic-pseudos*/
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
 
 /* its like <a> but gives a tooltip if you hover over it with the mouse <abbr title="World Health Organization">WHO</abbr> */
-abbr[title] { border-bottom: 1px dotted; }
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
 /* b and strong are kindof the same */
-b, strong { font-weight: bold; }
+b,
+strong {
+    font-weight: bold;
+}
 
 
 /* User agent stylesheet from Chrome
@@ -364,7 +397,9 @@ blockquote {
 }
 
 */
-blockquote { margin: 1em 40px; }
+blockquote {
+    margin: 1em 40px;
+}
 
 /*
 
@@ -376,7 +411,9 @@ Definition, its like `` in markdown
 }
 */
 
-dfn { font-style: italic; }
+dfn {
+    font-style: italic;
+}
 
 /* horizontal separation line, old style? 
 
@@ -393,7 +430,14 @@ hr {
     border-width: 1px;
 }
 */
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
 /*
 The <ins> tag defines a text that has been inserted into a document. Browsers will usually underline inserted text.
@@ -404,7 +448,11 @@ ins {
 }
 
 */
-ins { background: #ff9; color: #000; text-decoration: none; }
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
 
 /*
 like marking text like with a yellow marker
@@ -413,7 +461,12 @@ mark {
     color: marktext; //this seems to be #000 (from computed styles)
 }
 */
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
 
 /*
 Chrome user Agent:
@@ -432,7 +485,7 @@ code {
     font-family: monospace;
 }
 */
-code, 
+code,
 
 /*
 User Agent Chrome
@@ -440,7 +493,7 @@ kbd {
     font-family: monospace;
 }
 */
-kbd, 
+kbd,
 
 /*
 USER AGENT CHROME
@@ -448,9 +501,10 @@ samp {
     font-family: monospace;
 }
 */
-samp { 
+samp {
     font-family: monospace, serif;
-    font-size: 1em; /* relative to the parents font size*/
+    font-size: 1em;
+    /* relative to the parents font size*/
 }
 
 /*
@@ -471,16 +525,17 @@ pre {
 }
 
 */
-pre { 
+pre {
     white-space: pre;
     /*
       "pre-wrap": Sequences of white space are preserved.
       Lines are broken at newline characters, at <br>,
       and as necessary to fill line boxes.
     */
-    white-space: pre-wrap; 
+    white-space: pre-wrap;
 
-    word-wrap: break-word; /* how long words are broken */
+    word-wrap: break-word;
+    /* how long words are broken */
 }
 
 /*
@@ -495,8 +550,12 @@ q::after {
     content: open-quote;
 }
 */
-q { quotes: none; }
-q:before, q:after {
+q {
+    quotes: none;
+}
+
+q:before,
+q:after {
     content: "";
     content: none;
 }
@@ -507,23 +566,37 @@ small {
     font-size: smaller;
 }
 */
-small { font-size: 85%; }
+small {
+    font-size: 85%;
+}
+
 /*
 sub {
     vertical-align: sub;
     font-size: smaller;
 }
 */
-sub, 
+sub,
 /*
 sup {
     vertical-align: super;
     font-size: smaller;
 }
 */
-sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
 
 /*
 ul {
@@ -549,7 +622,11 @@ ol {
     padding-inline-start: 40px;
 }
 */
-ol { margin: 1em 0; padding: 0 0 0 40px; }
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
 /*
 <dl>
   <dt>Coffee</dt>
@@ -576,12 +653,14 @@ dd {
     margin-inline-start: 40px;
 }
 */
-dd { margin: 0 0 0 40px; }
+dd {
+    margin: 0 0 0 40px;
+}
 
 /* so for ul and ol under nav, clear them out*/
 nav ul,
-nav ol { 
-    list-style: none; 
+nav ol {
+    list-style: none;
     list-style-image: none;
     margin: 0;
     padding: 0;
@@ -602,9 +681,10 @@ img {
 }
 
 */
-img { 
-    border: 0; 
-    -ms-interpolation-mode: bicubic; /* ms specific, fuzzed up, nearest neighbor = keep pixels */
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    /* ms specific, fuzzed up, nearest neighbor = keep pixels */
     vertical-align: middle;
 }
 
@@ -624,7 +704,10 @@ svg:not(:root) {
 
 */
 
-svg:not(:root) { overflow: hidden; }
+svg:not(:root) {
+    overflow: hidden;
+}
+
 /*
 2nd time we do something for <figure>
 Chrome User Agent
@@ -636,7 +719,9 @@ figure {
     margin-inline-end: 40px;
 }
 */
-figure { margin: 0; }
+figure {
+    margin: 0;
+}
 
 
 /*
@@ -645,91 +730,415 @@ form {
     margin-top: 0em;
 }
 */
-form { margin: 0; }
-/*TODO: you are here*/
-fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
-legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
-button, input { line-height: normal; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
-button[disabled], input[disabled] { cursor: default; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
-.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
-@media only screen and (min-width: 35em) {
-    .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
-    .ir br { display: none; }
-    .hidden { display: none !important; visibility: hidden; }
-    .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-    .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-    .invisible { visibility: hidden; }
-    .clearfix:before, .clearfix:after { content: ""; display: table; }
-    .clearfix:after { clear: both; }
-    .clearfix { *zoom: 1; }
+form {
+    margin: 0;
 }
-@media print {
-    * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-    a, a:visited { text-decoration: underline; }
-    a[href]:after { content: " (" attr(href) ")"; }
-    abbr[title]:after { content: " (" attr(title) ")"; }
-    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-    thead { display: table-header-group; } /* h5bp.com/t */
-    tr, img { page-break-inside: avoid; }
-    img { max-width: 100% !important; }
-    @page { margin: 0.5cm; }
-    p, h2, h3 { orphans: 3; widows: 3; }
-    h2, h3 { page-break-after: avoid; }
+
+/*CHROME USER AGENT
+fieldset {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
 }
-html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td {
-    margin:0;
-    padding:0;
+
+
+*/
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
+
+/*
+UA CSS chrome
+label {
+    cursor: default;
+}*/
+label {
+    cursor: pointer;
+}
+
+/*
+USER AGENT CHROME
+legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+*/
+legend {
+    border: 0;
+    *margin-left: -7px;
+    padding: 0;
+    white-space: normal;
+}
+
+/* already done */
+button,
+/* already done */
+input,
+/* already done */
+select,
+/* already done */
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+/* already done */
+button,
+/* already done */
+input {
+    line-height: normal;
+}
+
+/* already done */
+button,
+input[type="button"],
+/* clears out input form fields */
+input[type="reset"],
+/* already done */
+input[type="submit"] {
+    cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+/*
+input[type="search" i] {
+    appearance: auto;
+    box-sizing: border-box;
+    padding: 1px 2px;
+}
+
+there is a generic input user agent css, (for all values of "type" attribute)
+*/
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/*
+"::-moz-focus-inner" is a pseudo-element specific to the Mozilla Firefox web browser
+ that targets the inner border or padding around an element when it receives focus.
+ It is used to apply specific styles to the inner focus outline, separate from the outer focus outline.
+ This pseudo-element is not part of the CSS standard
+ and should be used with caution as it may not be supported by all web browsers
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+    /* how tex area is resized */
+}
+
+input:valid,
+textarea:valid {}
+
+/* there is no user agent css for these pseudo classes :valid and :invalid 
+*/
+input:invalid,
+textarea:invalid {
+    background-color: #f0dddd;
+}
+
+/* user agent
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
 }
-fieldset,img {
-    border:0;
-    margin:0;
+*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-address,caption,cite,code,dfn,em,strong,th,var { }
-ol,ul {
-    list-style:none;
+
+/*
+user agent
+td {
+    display: table-cell;
+    vertical-align: inherit;
 }
-caption,th {
-    text-align:left;
+
+
+*/
+td {
+    vertical-align: top;
 }
-h1,h2,h3,h4,h5,h6 {
-    font-weight:normal;
+
+/*
+user agent
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
-q:before,q:after {
-    content:'';
+*/
+tr {
+    display: init
 }
-abbr,acronym { border:0;
+
+@media only screen and (min-width: 35em) {
+    .ir {
+        display: block;
+        border: 0;
+        text-indent: -999em;
+        overflow: hidden;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        text-align: left;
+        direction: ltr;
+        *line-height: 0;
+    }
+
+    .ir br {
+        display: none;
+    }
+
+    .hidden {
+        display: none !important;
+        visibility: hidden;
+    }
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
 }
-li{padding:0;}
-.clearfix:after {content: "."; display: block; clear: both;visibility: hidden; line-height: 0; height: 0}
-.clearfix {display: inline-block}
-html[xmlns] .clearfix {display: block}
-* html .clearfix {height: 1%}
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+/*user agent
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+*/
+th,
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+    margin: 0;
+}
+
+/*
+user agent
+address {
+    display: block;
+    font-style: italic;
+}
+*/
+address,
+
+/* 
+user agent
+caption {
+    display: table-caption;
+    text-align: -webkit-center;
+}
+
+style with "caption-side" and "text-align".
+*/
+caption,
+/*
+Chrome User agent
+cite {
+    font-style: italic;
+}
+*/
+cite,
+
+code,
+dfn,
+em,
+strong,
+th,
+var {
+ content: "this is just to disable css(emptyRules)"
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+li {
+    padding: 0;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.clearfix {
+    display: inline-block
+}
+
+html[xmlns] .clearfix {
+    display: block
+}
+
+* html .clearfix {
+    height: 1%
+}
+
 .unselectable {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-a{text-decoration:none; color:#000;}
-head {display:block;}
-a{outline:0;}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+head {
+    display: block;
+}
+
+a {
+    outline: 0;
+}
+
 body {
     font-family: 'myFontRegular', Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -741,5 +1150,10 @@ body {
     -webkit-font-smoothing: antialiased !important;
 }
 
-*, input, select{box-sizing: border-box;}
+*,
+input,
+select {
+    box-sizing: border-box;
+}
+
 /* Reset Tools */
