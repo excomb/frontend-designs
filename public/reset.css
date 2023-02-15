@@ -98,7 +98,6 @@ Example using audio
 </figure>
 */
 audio,
-
 /*
 CHROME USER AGENT
 canvas {
@@ -113,7 +112,6 @@ canvas {
 }
 */
 canvas,
-
 /*
 FIREFOX USER AGENT
 video {
@@ -129,11 +127,12 @@ video {
 */
 video {
     display: inline-block;
-    /* normally this is just "display: inline" 
+    /* normally this is just "display: inline" */
 }
 
-audio:not([controls]) { /* do i want this? */
-    display: none
+audio:not([controls]) {
+    /* do i want this? */
+    display: none;
 }
 
 /* anything that is hidden should not be displayed*/
@@ -838,7 +837,7 @@ input[type="search" i] {
 there is a generic input user agent css, (for all values of "type" attribute)
 */
 input[type="search"] {
-    -webkit-appearance: textfield;
+    /*-webkit-appearance: textfield;*/
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -870,7 +869,9 @@ textarea {
 }
 
 input:valid,
-textarea:valid {}
+textarea:valid {
+    content:"this is just a placeholder for vscode IDE not to mark it as error"
+}
 
 /* there is no user agent css for these pseudo classes :valid and :invalid 
 */
@@ -920,68 +921,6 @@ tr {
     display: init
 }
 
-@media only screen and (min-width: 35em) {
-    .ir {
-        display: block;
-        border: 0;
-        text-indent: -999em;
-        overflow: hidden;
-        background-color: transparent;
-        background-repeat: no-repeat;
-        text-align: left;
-        direction: ltr;
-        *line-height: 0;
-    }
-
-    .ir br {
-        display: none;
-    }
-
-    .hidden {
-        display: none !important;
-        visibility: hidden;
-    }
-
-    .visuallyhidden {
-        border: 0;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-    }
-
-    .visuallyhidden.focusable:active,
-    .visuallyhidden.focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-    }
-
-    .invisible {
-        visibility: hidden;
-    }
-
-    .clearfix:before,
-    .clearfix:after {
-        content: "";
-        display: table;
-    }
-
-    .clearfix:after {
-        clear: both;
-    }
-
-    .clearfix {
-        *zoom: 1;
-    }
-}
-
 html,
 body,
 div,
@@ -1014,22 +953,6 @@ th {
 */
 th,
 
-td {
-    margin: 0;
-    padding: 0;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-fieldset,
-img {
-    border: 0;
-    margin: 0;
-}
-
 /*
 user agent
 address {
@@ -1056,102 +979,339 @@ cite {
 }
 */
 cite,
-
+/*
+UA CSS
+code {
+    font-family: monospace;
+}
+*/
 code,
+
+/*
+A <dfn> means a word definition (like a cdecl) in the context of a sentence
+dfn {
+    font-style: italic;
+}
+*/
 dfn,
+/* UA Chrome
+When you want to stress (like in vocal) a word
+em {
+    font-style: italic;
+}
+*/
 em,
+/*
+Chrome UA
+Strong is to draw attention to a text, it should be user as "weaker" em, more in the context of a warning
+strong {
+    font-weight: bold;
+}
+*/
 strong,
+/*
+already defined
+*/
 th,
+
+/*
+UA css chrome
 var {
- content: "this is just to disable css(emptyRules)"
+    font-style: italic;
+}
+*/
+var {
+    content: "this is just to disable css(emptyRules)"
 }
 
+/* already done */
 ol,
+/* already done */
 ul {
     list-style: none;
 }
 
+/* already done */
 caption,
+/* already done */
 th {
     text-align: left;
 }
 
+/*
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h1,
+/*
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h2,
+/*
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h3,
+/*
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h4,
+/*
+h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h5,
+/*
+h6 {
+    display: block;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+*/
 h6 {
     font-weight: normal;
 }
 
+/* UA CSS
+q {
+    display: inline;
+}
+q::before {
+    content: open-quote;
+}
+q::after {
+    content: close-quote;
+}
+*/
 q:before,
 q:after {
     content: '';
 }
 
+/*
+UA for chrome and UA for firefox
+abbr[title] {
+    text-decoration: underline dotted;
+}
+*/
 abbr,
+/* deprecated in html5
+confirmed deprecated in https://developer.mozilla.org/en-US/docs/Web/HTML/Element/acronym
+
 acronym {
     border: 0;
 }
+*/
 
+/*
+FIREFOX
+li {
+  display: list-item;
+  text-align: match-parent;
+}
+CHROME
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+*/
 li {
     padding: 0;
 }
 
-.clearfix:after {
-    content: ".";
+/*
+FIREFOX
+::marker {
+  text-align: end;
+  text-transform: none;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  white-space: pre;
+}
+CHROME
+::marker {
+    text-align: start !important;
+    text-transform: none;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    
+    text-indent: 0px !important;
+    text-align-last: start !important;
+}
+*/
+li::marker {
+    content: "dummy css value, to not have in empty {}"
+}
+
+/*  xmlsn attribute could be "http://www.w3.org/1999/xhtml" for html5 standard
+CHROME and FIREFOX
+html {
     display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0
 }
-
-.clearfix {
-    display: inline-block
-}
-
+*/
 html[xmlns] .clearfix {
     display: block
 }
 
-* html .clearfix {
-    height: 1%
+/*
+CHROME
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+FIREFOX
+:link {
+  color: LinkText;
 }
 
-.unselectable {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+any <a> in the doc
+:any-link {
+  cursor: pointer;
 }
 
+:visited <-- visited links
+:link  <-- unvisted links
+*/
 a {
     text-decoration: none;
     color: #000;
 }
 
+/*
+FIREFOX AND CHROME
+head {
+    display: none;
+}
+
+*/
 head {
     display: block;
 }
 
+/* already done */
 a {
     outline: 0;
 }
 
-body {
-    font-family: 'myFontRegular', Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    background: #15151c;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
-}
+/*
+already done
+*/
 
 *,
 input,
+/* this is not needed chrome/firefox does select "input" with "*" */
+
+/*
+FIREFOX
+
+select {
+    text-align: initial;
+text-indent: initial;
+text-shadow: initial;
+text-transform: initial;
+word-spacing: initial;
+letter-spacing: initial;
+
+padding-block: 1px;
+padding-inline: 4px;
+background-color: -moz-Combobox;
+color: -moz-ComboboxText;
+vertical-align: baseline;
+appearance: auto;
+
+user-select: none;
+border-width: 2px;
+border-style: inset;
+overflow: clip;
+display: inline-block;
+page-break-inside: avoid;
+
+margin: 0;
+border-color: ButtonBorder;
+font: -moz-list;
+white-space: nowrap !important;
+word-wrap: normal !important;
+cursor: default;
+}
+
+CHROME
+select {
+    writing-mode: horizontal-tb !important;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    background-color: field;
+    cursor: default;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border-radius: 0px;
+}
+*/
 select {
     box-sizing: border-box;
 }
